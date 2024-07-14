@@ -1,0 +1,52 @@
+body {
+	background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    width: 450px;
+    margin-bottom: 75px;
+}
+
+.slot-machine {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.reel {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    font-size: 24px;
+    background-color: #f9f9f9;
+    transition: all 0.5s ease;
+}
+
+.reel.spin {
+    animation: spin 0.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+#spinButton {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 24px;
+}
